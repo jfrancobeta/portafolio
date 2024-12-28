@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header - Juan Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+      /* Scroll effect */
+      .scrolled {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      #mobileMenu.hidden {
+      display: none;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.5s ease-out forwards;
+      }
+
+      .delay-100 {
+        animation-delay: 0.1s;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <header
+      id="header"
+      class="py-4 fixed w-full z-50 transition-colors duration-300"
+    >
+      <nav
+        class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold">Juan Dev</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="index.html" class="hover:text-blue-600 transition-colors">Inicio</a>
+          <a href="skills.html" class="hover:text-blue-600 transition-colors"
+            >Habilidades</a
+          >
+          <a href="projects.html" class="hover:text-blue-600 transition-colors"
+            >Proyectos</a
+          >
+          <a href="contact.html" class="hover:text-blue-600 transition-colors"
+            >Contacto</a
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          
+          </button>
+          <button
+            id="menuToggle"
+            class="p-2 rounded-full hover:bg-gray-200 md:hidden transition"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          <a href="index.html" class="text-lg hover:text-blue-600 transition-colors"
+            >Inicio</a
+          >
+          <a
+            href="skills.html"
+            class="text-lg hover:text-blue-600 transition-colors"
+            >Habilidades</a
+          >
+          <a
+            href="projects.html"
+            class="text-lg hover:text-blue-600 transition-colors"
+            >Proyectos</a
+          >
+          <a
+            href="contact.html"
+            class="text-lg hover:text-blue-600 transition-colors"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-10 text-center animate-fade-in-up">
+          Proyectos Destacados
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Proyecto 1 -->
+
+          <div class="overflow-hidden animate-fade-in-up delay-100">
+            <div class="relative h-48 overflow-hidden rounded-lg">
+              <a
+                href="https://www.youtube.com/watch?v=tu_codigo_de_video"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/inventario.webp"
+                  alt="Sistema de Gestión de Inventario"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="text-white h-10 w-10"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 7L7 17" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">
+                Sistema de Gestión de Inventario
+              </h3>
+              <p class="text-sm text-gray-500">
+                Una solución todo en uno para gestionar la gestión de la
+                operaciones de manera eficiente. Realice un seguimiento de los
+                empleados, el inventario, las ventas y obtenga estadísticas
+                detalladas al alcance de su mano. Simplifique la gestión de su
+                negocio
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Java
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Spring Boot
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Spring Security
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Mysql
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  RESTful API
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Thymeleaf
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="overflow-hidden animate-fade-in-up delay-100">
+            <div class="relative h-48 overflow-hidden rounded-lg">
+              <!-- Enlace que redirige a YouTube -->
+              <a
+                href="https://www.youtube.com/watch?v=tu_codigo_de_video"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/eventos.webp"
+                  alt="Sistema de Gestión de Inventario"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="text-white h-10 w-10"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 7L7 17" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold">
+                Sistema de Gestión de Eventos
+              </h3>
+              <p class="text-sm text-gray-500">
+                Una plataforma escalable para registrar y gestionar eventos y
+                asistir a eventos. Incluye funciones como creación de eventos,
+                notificaciones en tiempo real, gestión de asistentes y pagos.
+                Ideal para eventos personales y empresariales.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Java
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Spring Boot
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Spring Security
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Oauth2
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Spring Cloud(Microservicios)
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  PostgreSQL
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Mysql
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  RESTful API
+                </span>
+                <span
+                  class="bg-gray-200 text-gray-800 text-xs font-medium px-2 py-1 rounded"
+                >
+                  Angular
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Repite esta estructura para los demás proyectos -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-200 py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">
+              Juan Franco Desarrollador
+            </h3>
+            <p class="text-sm text-gray-600">
+              Desarrollador Backend & Frontend especializado en crear soluciones
+              robustas y escalables.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-sm hover:text-blue-600 transition-colors"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="skills.html"
+                  class="text-sm hover:text-blue-600 transition-colors"
+                  >Habilidades</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projects.html"
+                  class="text-sm hover:text-blue-600 transition-colors"
+                  >Proyectos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-sm hover:text-blue-600 transition-colors"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Conéctate</h3>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/jfrancobeta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:scale-110 transition-transform"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg"
+                  alt="GitHub"
+                  class="h-6 w-6"
+                />
+                <span class="sr-only">GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/juan-david-franco-betancur-699b121b5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people%3BJRmWj9HxTbGvwZUVBqKkHQ%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:scale-110 transition-transform"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg"
+                  alt="LinkedIn"
+                  class="h-6 w-6"
+                />
+                <span class="sr-only">LinkedIn</span>
+              </a>
+              <!-- <a href="https://twitter.com/juandev" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/twitter.svg" alt="Twitter" class="h-6 w-6">
+              <span class="sr-only">Twitter</span>
+            </a> -->
+              <a
+                href="mailto:juandavid.francob@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:scale-110 transition-transform"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mail-dot-ru.svg"
+                  alt="Email"
+                  class="h-6 w-6"
+                />
+                <span class="sr-only">Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-gray-300 text-center text-sm text-gray-600"
+        >
+          &copy; 2024 Juan Desarrollador. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Scroll effect
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 10);
+      });
+    </script>
+  </body>
+</html>

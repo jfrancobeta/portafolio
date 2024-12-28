@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header - Juan Dev</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden {
+      display: none;
+    }
+    .block {
+      display: block;
+    }
+    /* Scroll effect */
+    .scrolled {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    #mobileMenu.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header id="header" class="py-4 fixed w-full z-50 transition-colors duration-300">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold">Juan Dev</a>
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html" class="hover:text-blue-600 transition-colors">Inicio</a>
+        <a href="skills.html" class="hover:text-blue-600 transition-colors">Habilidades</a>
+        <a href="projects.html" class="hover:text-blue-600 transition-colors">Proyectos</a>
+        <a href="contact.html" class="hover:text-blue-600 transition-colors">Contacto</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        
+        <button id="menuToggle" class="p-2 rounded-full hover:bg-gray-200 md:hidden transition">
+          ☰
+        </button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="index.html" class="text-lg hover:text-blue-600 transition-colors">Inicio</a>
+        <a href="skills.html" class="text-lg hover:text-blue-600 transition-colors">Habilidades</a>
+        <a href="projects.html" class="text-lg hover:text-blue-600 transition-colors">Proyectos</a>
+        <a href="contact.html" class="text-lg hover:text-blue-600 transition-colors">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-20 relative overflow-hidden">
+    <div
+      class="absolute inset-0 z-0"
+      
+    ></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <h2 class="text-3xl font-bold mb-10 text-center animate-fade-in-up">
+        Contáctame
+      </h2>
+      <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 animate-fade-in-up delay-200">
+        <form class="space-y-6" action="https://formspree.io/f/xrbbekgl" method="POST">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2">Nombre</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Tu nombre"
+              name="name"
+              class="w-full p-2 border rounded"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="tu@email.com"
+              class="w-full p-2 border rounded"
+              required
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-2">Mensaje</label>
+            <textarea
+              id="message"
+              placeholder="Tu mensaje"
+              name="message"
+              class="w-full p-2 border rounded"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-600 flex items-center justify-center"
+          >
+            Enviar Mensaje
+            <svg
+              class="ml-2 h-4 w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14.752 11.168l-9.6-5.333m0 10.667l9.6-5.334M22 12h-6"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-gray-200 py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Juan Franco Desarrollador</h3>
+          <p class="text-sm text-gray-600">
+            Desarrollador Backend  & Frontend especializado en crear soluciones robustas y escalables.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-blue-600 transition-colors">Inicio</a></li>
+            <li><a href="skills.html" class="text-sm hover:text-blue-600 transition-colors">Habilidades</a></li>
+            <li><a href="projects.html" class="text-sm hover:text-blue-600 transition-colors">Proyectos</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-blue-600 transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Conéctate</h3>
+          <div class="flex space-x-4">
+            <a href="https://github.com/jfrancobeta" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg" alt="GitHub" class="h-6 w-6">
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/juan-david-franco-betancur-699b121b5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people%3BJRmWj9HxTbGvwZUVBqKkHQ%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-6">
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <!-- <a href="https://twitter.com/juandev" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/twitter.svg" alt="Twitter" class="h-6 w-6">
+              <span class="sr-only">Twitter</span>
+            </a> -->
+            <a href="mailto:juandavid.francob@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/mail-dot-ru.svg" alt="Email" class="h-6 w-6">
+              <span class="sr-only">Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-300 text-center text-sm text-gray-600">
+        &copy; 2024 Juan Desarrollador. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>
